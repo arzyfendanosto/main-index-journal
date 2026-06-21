@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识库 · sofascore 资料页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f2f4f7;
+            color: #1E293B;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        /* header */
+        .site-header {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #d0d7de;
+            padding-bottom: 1.2rem;
+        }
+
+        .site-header h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #0b1a2b;
+        }
+
+        .site-header p {
+            color: #4b5b6a;
+            margin-top: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        /* 卡片网格布局 —— 更像知识库目录 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.6rem;
+        }
+
+        @media (min-width: 680px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.6rem 1.5rem;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e3e8ee;
+            transition: box-shadow 0.15s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 14px rgba(0, 20, 40, 0.06);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+            color: #0f2a3f;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title span {
+            background: #dde3ed;
+            border-radius: 4px;
+            padding: 0 0.4rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #2f4053;
+            letter-spacing: 0.3px;
+        }
+
+        .card p, .card li {
+            font-size: 0.95rem;
+            color: #2d3e4f;
+        }
+
+        .card ul {
+            margin-top: 0.5rem;
+            padding-left: 1.3rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* 特别提示 / 引用块 */
+        .note-box {
+            background: #f7f9fc;
+            border-left: 4px solid #5c7a9a;
+            border-radius: 0 10px 10px 0;
+            padding: 1.2rem 1.3rem;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            border: 1px solid #dce2ec;
+            border-left-width: 4px;
+        }
+
+        .note-box strong {
+            color: #1b3045;
+        }
+
+        /* 嵌入链接样式 */
+        a {
+            color: #1a5d8f;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #0b3a5e;
+        }
+
+        .standalone-link {
+            display: inline-block;
+            margin: 0.1rem 0;
+        }
+
+        /* 页脚 */
+        .page-footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d8dee6;
+            font-size: 0.85rem;
+            color: #5a6d7e;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.8rem;
+        }
+
+        .page-footer small {
+            opacity: 0.75;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e1e6ed;
+            margin: 1.8rem 0 0.8rem;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 460px) {
+            body { padding: 1rem 0.8rem; }
+            .card { padding: 1.2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1>📘 知识库 · 日常查询与延伸</h1>
+            <p>围绕运动数据与赛事记录的对照参考，整理自 <a href="https://main-index-sofascore.com">sofascore</a> 公开内容。</p>
+        </header>
+
+        <div class="card-grid">
+            <!-- 卡片1: 日常查询区 -->
+            <div class="card">
+                <div class="card-title">
+                    📋 日常查询
+                    <span>对照</span>
+                </div>
+                <p>无论是赛前阵容、实时比分还是历史交锋，多数使用者习惯先确认基础数据。建议搭配以下方式对照：</p>
+                <ul>
+                    <li>关注近期五个联赛的场均射门与控球率</li>
+                    <li>对比主客场胜率差异，留意裁判倾向</li>
+                    <li>赛季累计红黄牌与犯规趋势</li>
+                </ul>
+                <p style="margin-top:0.6rem;">遇到不熟悉的队伍或联赛缩写，可借助平台内的搜索与筛选快速定位。上面的例子来自日常整理，你也可以直接到 <a href="https://main-index-sofascore.com">sofascore</a> 查看具体数值。</p>
+            </div>
+
+            <!-- 卡片2: 延伸阅读区 -->
+            <div class="card">
+                <div class="card-title">
+                    📎 延伸阅读
+                    <span>参考</span>
+                </div>
+                <p>除了基础比分，这几类衍生信息也常被用作讨论依据：</p>
+                <ul>
+                    <li><strong>球员热力图</strong> —— 观察跑动范围和攻守侧重</li>
+                    <li><strong>预期进球 (xG) 对比</strong> —— 判断机会转化效率</li>
+                    <li><strong>赛后评分汇总</strong> —— 综合媒体与算法评分</li>
+                </ul>
+                <p style="margin-top:0.4rem;">这些内容通常会在赛后几小时内更新，方便复盘与横向比较。延伸阅读时，建议结合其他数据源交叉验证。</p>
+            </div>
+
+            <!-- 卡片3: 提示区（半宽或全宽视网格而定） -->
+            <div class="card">
+                <div class="card-title">
+                    💡 使用提示
+                    <span>注意</span>
+                </div>
+                <p>统计口径与更新时刻可能因赛事而异：</p>
+                <ul>
+                    <li>实时数据通常延迟 30–60 秒，以官方信号为准</li>
+                    <li>部分历史数据只保留近 5 个赛季，早于该范围需查档案</li>
+                    <li>移动端与桌面端筛选条件布局不同，可切换尝试</li>
+                </ul>
+                <p style="margin-top:0.5rem;">如果你对某个数值存疑，可以试着切换联赛或日期范围，排除缓存干扰。</p>
+            </div>
+
+            <!-- 卡片4: 相关信息 / FAQ 摘要 -->
+            <div class="card">
+                <div class="card-title">
+                    ❓ 相关信息
+                    <span>FAQ 摘要</span>
+                </div>
+                <p><strong>问：</strong> 某个联赛的赛程为什么显示灰色？<br>
+                <span style="color:#4c6379;">答：通常表示待确认或延期，点击可查看最新公告。</span></p>
+                <p style="margin-top:0.5rem;"><strong>问：</strong> 数据导出支持哪些格式？<br>
+                <span style="color:#4c6379;">答：部分页面提供 JSON / CSV 下载，具体见图表附近按钮。</span></p>
+                <p style="margin-top:0.6rem;">更多细节可在对应帮助页面了解，或者直接在社区里搜索同类问题。</p>
+            </div>
+        </div>
+
+        <!-- 说明区 / 附加提示 -->
+        <div class="note-box">
+            <strong>📌 说明</strong>：本页为介绍性索引，所有数据与统计以 <a href="https://main-index-sofascore.com">sofascore</a> 展示为准。日常使用时请注意网络环境与数据刷新频率。如需引用具体数字，建议二次核对原始页面。
+        </div>
+
+        <hr>
+
+        <!-- 简单信息区：更像知识库的“关于” -->
+        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; justify-content: space-between;">
+            <div style="flex:1; min-width:200px;">
+                <h3 style="font-weight: 600; font-size: 1.05rem; margin-bottom: 0.3rem; color: #1a2d40;">常用对照目录</h3>
+                <ul style="list-style: none; padding:0; font-size: 0.9rem;">
+                    <li>• 足球五大联赛 + 欧冠</li>
+                    <li>• 篮球 NBA + 欧洲联赛</li>
+                    <li>• 网球大满贯即时数据</li>
+                    <li>• 电竞 (部分赛事)</li>
+                </ul>
+            </div>
+            <div style="flex:1; min-width:200px;">
+                <h3 style="font-weight: 600; font-size: 1.05rem; margin-bottom: 0.3rem; color: #1a2d40;">延伸信息源参考</h3>
+                <ul style="list-style: none; padding:0; font-size: 0.9rem;">
+                    <li>• 联赛官方技术统计</li>
+                    <li>• 第三方 xG 聚合站</li>
+                    <li>• 球员社交媒体动态</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <span>知识库入口式 · 版本 2025.04</span>
+            <small>内容仅供参考，不构成投资或投注建议。</small>
+        </footer>
+    </div>
+</body>
+</html>
